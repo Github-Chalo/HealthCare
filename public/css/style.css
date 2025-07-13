@@ -1,0 +1,794 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.active{
+    color: #045ab6 !important;
+}
+
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+    background: rgb(245, 248, 245);
+}
+
+
+/* register */
+.register-navbar{
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgb(219, 217, 217);
+}
+
+.register-box {
+    width: 800px;
+    background-color: #fff;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.register-box h3{
+    font-weight: 300;
+}
+
+.register-box input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px auto;
+    border: 1px solid #555;
+    padding-left: 8px;
+}
+
+.register-box input:focus{
+    outline: 1px solid #005eb8;
+}
+.register-box,.login-box label{
+    font-weight: bold;
+}
+.register-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+}
+.register-submit button{
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #005eb8;
+    text-decoration: none;
+    padding: 15px 60px;
+    color: #fff;
+    font-weight: bolder;
+}
+.register-box p{
+    text-align: center;
+    margin: 30px auto;
+}
+.register-box p a{
+    text-decoration: none;
+}
+
+@media (max-width:768px){
+    html,body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .setup{
+        margin-top: 15px;
+    }
+    .setup h3{
+        font-size: 15px;
+    }
+    .setup i{
+        font-size: 15px;
+    }
+    .register-box{
+        width: 90%;
+    }
+}
+
+/* header */
+.navbar{
+    padding: 15px 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(114, 55, 55, 0.1) !important;
+}
+
+.logo-section{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.logo-section .links .active::before{
+    content: '';
+    background: #045ab6;
+    width: 80px;
+    height: 3px;
+    border-radius: 30px;
+    bottom: 0;
+    position: absolute;
+    transform: translateY(-48%,-48%);
+}
+.logo-section .links a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Care Section Styles */
+.care-section {
+    background: url('/images/hosi.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 50px 20px;
+    color: white;
+}
+
+.care-content {
+    max-width: 1050px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.care-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+}
+
+.care-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ddd;
+    text-align: left;
+}
+
+.care-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: left;
+}
+
+.care-link {
+    text-decoration: none;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.care-link:hover {
+    background: #0078d4;
+    border-color: #0078d4;
+    color: #fff;
+}
+/* main section */
+/* General structure */
+.main-section,.schedulling {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.care-team {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    padding: 20px;
+}
+
+.care-team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.care-team-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.settings-icon {
+    font-size: 20px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* Cards container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+/* Individual card */
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row, with gap */
+    min-width: 250px; /* Ensure a minimum card width */
+    max-width: 300px; /* Limit card width */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.card-header {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-header .group-avatar {
+    display: flex;
+    gap: -10px;
+}
+
+.card-header .group-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+    padding: 15px;
+}
+
+.card-body h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #666;
+}
+
+.card-body .status {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.card-body .btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-body .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; 
+        max-width: 100%; 
+    }
+
+    .care-team-header h2 {
+        font-size: 20px; 
+    }
+
+    .settings-icon {
+        font-size: 18px; 
+    }
+}
+
+
+.quick-links {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.quick-links h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.quicks {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.link-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.link-card:hover {
+    background-color: #eaf4ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #e7f3fe;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.link-card span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+@media  (max-width: 768px) {
+    .link-card{
+        width: 150px;
+        display: flex;
+        flex: 0.5;
+    }
+}
+
+.health-records-note {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    border: 1px solid #97c7fa;
+    border-radius: 5px;
+    background-color: #d7e9fc;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.health-records-note .icon {
+    font-size: 20px;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.health-records-note .content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.health-records-note .content p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 0;
+    line-height: 1.5;
+}
+
+.health-records-note .content a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.health-records-note .content a:hover {
+    text-decoration: none;
+}
+.health-updates{
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    padding: 20px;
+}
+.health-header{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.health-header h2{
+    font-size: 24px;
+    font-weight: 600;
+}
+.health-updates .health-header i{
+    font-size: 20px;
+    color: #007bff;
+}
+
+.health-body h4{
+    margin-top: 20px;
+    font-weight: 300;
+}
+.health-body p{
+    font-weight: 400;
+}
+
+.health-card{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+.health-card h3{
+    font-weight: 300;
+    font-size: 20px;
+}
+.health-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.health-card-header a{
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 300;
+    background: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #b6b3b3;
+
+}
+
+@media (max-width:768px){
+    .health-card-header a{
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+    .health-card-header h3{
+        font-size: 13px;
+    }
+}
+
+/* FindCare Section Styles */
+.find-care-section {
+    background: url('/images/facility.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    height: auto;
+    color: white;
+}
+
+.find-care-content{
+    max-width: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.find-care-content .search{
+    background: #fff;
+    padding: 20px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.find-care-content .search input{
+    width: 100%;
+    height: 62px;
+    border-radius: 30px;
+    border: 1px solid #555;
+    outline: none;
+    padding-left: 10px;
+}
+
+.find-care-content .search button{
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background: #005eb8;
+    text-decoration: none;
+    padding: 15px 60px;
+    color: #fff;
+    font-weight: bolder;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+}
+
+@media (max-width: 768px){
+    .find-care-content .search input{
+        height: 55px;
+    }
+    .find-care-content .search button{
+        padding: 10px 20px;
+        top: 18px;
+        right: 15px;
+    }
+    .find-care-content .search{
+        padding: 10px;
+    }
+}
+
+/* Or */
+.or{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.or hr{
+    color: black;
+    width: 100px;
+}
+.or p{
+    margin: 0 10px;
+    font-weight: bold;
+}
+.schedulling h3{
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.schedulling .schedule-link{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    gap: 25px;
+    background: #fff;
+    border: 1px solid #97c7fa;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 20px auto;
+}
+.schedulling .schedule-link .icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #97c7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.schedulling .schedule-link i{
+    font-size: 20px;
+    color: #007bff;
+}
+
+.schedulling .schedule-link a{
+    text-decoration: none;
+    color: #2b2a2a;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.tests{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.tests .search{
+    background: #fff;
+    padding: 20px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.tests .search input{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.tests .results-card{
+    width: 100%;
+    height: 50vh;
+    background: #fff;
+    box-shadow: 2px 2px 10px rgb(233, 231, 231);
+    padding: 20px;
+}
+.results-card a{
+    text-decoration: none;
+    color: #555;
+}
+.results-card a:hover{
+    background: #f7f5f5;
+}
+.results-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.results-body .name{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+.results-body .name h3{
+    font-size: 19px;
+    font-weight: 400;
+}
+.tests hr{
+    color: black;
+}
+.result-setting{
+    border: 1px solid rgb(199, 196, 196);
+    background: rgb(240, 238, 238);
+    height: 20vh;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+.rs-setting{
+    border: 1px solid rgb(199, 196, 196);
+    background: rgb(240, 238, 238);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 10px;
+}
+.rs-setting h5{
+    font-weight: 400;
+}
+.result-setting h5{
+    font-size: 20px;
+    font-weight: 300;
+}
+.links .yes{
+    border: 1px solid rgb(14, 154, 219);
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    background: #b8d6ec;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+.links .yes:hover{
+    background: #fff;
+}
+.links .no{
+    border: 1px solid rgb(14, 154, 219);
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 15px;
+}
+.links .no:hover{
+    background: #fff;
+}
+
+.visits{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* advent-navbar */
+.advent-navbar{
+    background: rgb(9, 177, 168);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.advent-navbar .circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.advent-navbar h3{
+    font-size: 18px;
+    color: #fff;
+}
+
+@media (max-width:768px){
+    .advent-navbar h3{
+        font-size: 16px;
+    }
+    .advent-navbar{
+        gap: 10px;
+    }
+    .tests,.visits{
+        padding: 20px;
+    }
+}
+
+.test-info .info{
+    padding:0 5%;
+    background: #dad8d8;
+}
+.test-info .info h3{
+    font-size: 20px;
+    font-weight: 300;
+}
+.test-info .collected{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.test-info .collected h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+.test-info .info .list{
+    text-decoration: none;
+    padding-top: 10px;
+}
+.test-info .info .collected a i{
+    font-size: 20px;
+    color: #2081e9;
+}
+.visualization{
+    padding:0 5%;
+}
+.visualization .cards{
+    background: #fff;
+    height: 30vh;
+}

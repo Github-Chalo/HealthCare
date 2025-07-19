@@ -28,7 +28,7 @@ Route::get('/admin/users',[AdminDashboardController::class,'users'])->name('admi
 
 Route::post('/admin/users/update/{id}',[AdminDashboardController::class,'updateUser'])->name('admin.users.update');
 Route::get('/admin/users/delete/{id}',[AdminDashboardController::class,'deleteUser'])->name('admin.users.delete');
-
+Route::get('/admin/results/{id}',[AdminDashboardController::class,'results'])->name('admin.users.results');
 
 
 

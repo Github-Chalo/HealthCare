@@ -14,7 +14,7 @@
       
         <!--navigation-->
         <ul class="metismenu" id="sidenav">
-          <li>
+          {{-- <li>
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><i class="material-icons-outlined">home</i>
               </div>
@@ -26,6 +26,13 @@
               <li><a href="index2.html"><i class="material-icons-outlined">arrow_right</i>Data2</a>
               </li>
             </ul>
+          </li> --}}
+          <li>
+            <a href="{{ route('admin.dashboard') }}">
+              <div class="parent-icon"><i class="material-icons-outlined">dashboard</i>
+              </div>
+              <div class="menu-title">Dashboard</div>
+            </a>
           </li>
           <li>
             <a href="{{ route('admin.users') }}">

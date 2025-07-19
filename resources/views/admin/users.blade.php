@@ -27,7 +27,7 @@
                     @foreach($users as $user)
                     <tr>
                         <td>{{ $user->id }}</td>
-                        <td>{{ $user->fullName() }}</td>
+                        <td><a href="{{ route('admin.users.results', $user->id) }}">{{ $user->fullName() }}</a></td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->adreno_no }}</td>
                         <td>{{ $user->created_at->format('Y-m-d H:i:s') }}</td>
@@ -61,8 +61,9 @@
     {{-- Update Modal --}}
     <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <form method="POST" id="updateForm">
+            <form method="post" id="updateForm">
                 @csrf
+                <input type="hidden" name="user_id" id="update_user_id">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="updateModalLabel">Update User</h5>
@@ -107,7 +108,7 @@
 </div>
 
 {{-- JS to handle modal data injection --}}
-@push('scripts')
+
 <script>
     // Fill Update Modal
     document.querySelectorAll('.edit-btn').forEach(button => {
@@ -128,6 +129,6 @@
         });
     });
 </script>
-@endpush
+
 
 @endsection

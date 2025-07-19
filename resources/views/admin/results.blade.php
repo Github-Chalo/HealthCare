@@ -1,83 +1,15 @@
-@extends('user.advent-app')
+@extends('admin.app')
 
-@section('title','Find Care')
+@section('title','Users')
 
 @section('content')
+
+
 
 <!-- Chart.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-    .test-info {
-        background: #f8f9fa;
-        padding: 1rem;
-        width: 95%;
-        margin: 0 auto;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        overflow-x: hidden;
-    }
-
-    .info-header {
-        background: white;
-        border-radius: 10px;
-        padding: 1.5rem;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        margin-bottom: 1.5rem;
-    }
-
-    .back-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: #4a90e2;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-    }
-
-    .back-link:hover {
-        color: #357abd;
-    }
-
-    .test-title {
-        color: #2c3e50;
-        font-size: 1.8rem;
-        font-weight: 600;
-        margin: 0 0 0.5rem 0;
-    }
-
-    .collection-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 1rem;
-        border-top: 1px solid #e9ecef;
-    }
-
-    .collection-date {
-        color: #6c757d;
-        font-size: 0.95rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .print-btn {
-        background: #28a745;
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 0.9rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .print-btn:hover {
-        background: #218838;
-    }
 
     .main-content {
         background: white;
@@ -263,26 +195,10 @@
     }
 </style>
 
-<section class="test-info">
-    <div class="info-header">
-        <a href="{{ route('user.tests') }}" class="back-link">
-            <i class="fa-solid fa-arrow-left"></i> Back to Test Results
-        </a>
-        <h1 class="test-title">Your Health Monitor Results</h1>
-        <div class="collection-info">
-            <div class="collection-date">
-                <i class="fa-solid fa-calendar-alt"></i>
-                Taken on November 24, 2024 at 12:54 PM
-            </div>
-            <a href="" class="print-btn">
-                <i class="fa-solid fa-print"></i> Print
-            </a>
-        </div>
-    </div>
 
-    <div class="main-content">
-        <h2 class="section-title">Your Vital Signs</h2>
-        
+<div class="main-content" style="height: 80vh; overflow: auto;">
+        <h2 class="section-title text-start">{{ $user->fullName() }}'s Vital Signs</h2>
+
         <div class="content-row">
             <!-- Table Section -->
             <div class="table-section">
@@ -290,8 +206,7 @@
                     <h4>
                         <i class="fa-solid fa-list-ul"></i> Recent Readings
                     </h4>
-                    <a href="{{ route('user.testInfo') }}" class="refresh-link">
-                        <i class="fa-solid fa-refresh"></i> Refresh
+                    <a href="#"></i> Refresh
                     </a>
                 </div>
                 <div class="table-container">
@@ -360,9 +275,9 @@
             </div>
         </div>
     </div>
-</section>
 
-<!-- Chart Scripts -->
+
+    <!-- Chart Scripts -->
 <script>
     const spo2Data = {!! json_encode($sensordata->pluck('Spo2')->map(fn($v) => floatval($v))) !!};
     const heartRateData = {!! json_encode($sensordata->pluck('Heart_rate')->map(fn($v) => floatval($v))) !!};
@@ -466,5 +381,6 @@
         }
     });
 </script>
+
 
 @endsection

@@ -41,7 +41,7 @@
 
   <!--start main wrapper-->
   <main class="main-wrapper">
-    <div class="main-content">
+    <div class="main-content" style="min-height:88vh;">
       @yield('content')
 	
     </div>

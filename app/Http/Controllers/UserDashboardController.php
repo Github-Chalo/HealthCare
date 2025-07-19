@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\sensordata;
 use Illuminate\Http\Request;
 use App\Models\User; 
 use Illuminate\Support\Facades\Auth;
-use App\Models\Sensordata;
 
 class UserDashboardController extends Controller
 {
@@ -24,7 +24,7 @@ class UserDashboardController extends Controller
     }
     public function testInfo(){
         $user=Auth::user();
-        $sensordata = Sensordata::where('adreno_no', $user->adreno_no)->get();
+        $sensordata = sensordata::where('adreno_no', $user->adreno_no)->get();
         return view('user.testInfo', compact('user', 'sensordata'));
     }
 }

@@ -19,6 +19,7 @@ Route::get('/user/findCare',[UserDashboardController::class,'findCare'])->name('
 Route::get('user/tests',[UserDashboardController::class,'tests'])->name('user.tests');
 Route::get('/user/visits',[UserDashboardController::class,'visits'])->name('user.visits');
 Route::get('/user/test-info',[UserDashboardController::class,'testInfo'])->name('user.testInfo');
+Route::get('/user/my-chart',[UserDashboardController::class,'myChart'])->name('user.myChart');
 
 
 

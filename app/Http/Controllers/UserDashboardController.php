@@ -27,4 +27,10 @@ class UserDashboardController extends Controller
         $sensordata = sensordata::where('adreno_no', $user->adreno_no)->get();
         return view('user.testInfo', compact('user', 'sensordata'));
     }
+
+    public function myChart(){
+        $user=Auth::user();
+        $sensordata = sensordata::where('adreno_no', $user->adreno_no)->get();
+        return view('user.myChart', compact('user', 'sensordata'));
+    }
 }
